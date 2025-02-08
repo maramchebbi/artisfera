@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthorController!{% endblock %}
+
+{% block body %}
+<h1>Styles List </h1>
+<a href="{{path('app_style_new')}}">Add Style</a>
+<div>
+{% if styles is defined and styles is not empty %}
+{#<p>Tableau contient des données.</p>#}
+{% else %}
+<p>Tableau vide.</p>
+{% endif %}
+{% for style in styles %}
+<img src="{{asset(style.extab)}}" alt="{{style.typep}}" height="300px" />
+<p> <b> Type : </b> {{ style.typep}} </p>
+<p> <b> Description : </b> {{ style.description }} </p>
+{#<p> <b> Number of Books : </b> {{ author.nbBooks}} </p>
+<a href="{{path('app_author_details',{id: author.id})}}">Details<a/>#}
+<a href="{{path('app_style_edit',{id: style.id})}}">Edit<a/>
+<a href="{{path('app_style_remove',{id: style.id})}}">Delete<a/>
+<hr>
+{% else %}
+<p>Le Tableau est vide.</p>
+{% endfor %}
+
+<hr>
+
+</div>
+{% endblock %}

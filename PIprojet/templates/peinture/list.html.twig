@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthorController!{% endblock %}
+
+{% block body %}
+<h1>Peintures List </h1>
+<a href="{{path('app_peinture_new')}}">Add Peinture</a>
+<div>
+{% if peintures is defined and peintures is not empty %}
+{#<p>Tableau contient des données.</p>#}
+{% else %}
+<p>Tableau vide.</p>
+{% endif %}
+{% for peinture in peintures %}
+<img src="{{asset(peinture.tableau)}}" alt="{{peinture.titre}}" height="300px" />
+<p> <b> Titre : </b> {{ peinture.titre | upper }} </p>
+<p> <b> Date de création : </b> {{ peinture.dateCr | date('d-m-Y') }} </p>
+<p> <b> Type : </b> {{ peinture.type.typep}} </p>
+{#<p> <b> Number of Books : </b> {{ author.nbBooks}} </p>
+<a href="{{path('app_author_details',{id: author.id})}}">Details<a/>#}
+<a href="{{path('app_peinture_edit',{id: peinture.id})}}">Edit<a/>
+<a href="{{path('app_peinture_remove',{id: peinture.id})}}">Delete<a/>
+<hr>
+{% else %}
+<p>Le Tableau est vide.</p>
+{% endfor %}
+
+<hr>
+
+</div>
+{% endblock %}
