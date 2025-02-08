@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 01 || Muzex || Museum and Artists HTML Template</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/images/favicon/site.webmanifest') }}">
+
+    <!-- Fonts URL -->
+    <link href="../css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+    <!-- Plugins CSS -->
+     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/muzex-icons.css') }}"> 
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+
+{% block css %}{% endblock %}
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div><!-- /.preloader -->
+    <div class="page-wrapper">
+
+        <div class="topbar-one">
+            <div class="container">
+                <div class="topbar-one__left">
+                </div><!-- /.topbar-one__left -->
+                <div class="topbar-one__right">
+                    <a href="#"><i class="far fa-clock"></i> Mon - Sat 9.00 - 18.00</a>
+                    <a href="#"><i class="fa fa-phone-alt"></i> (251) 235-3256</a>
+                    <a href="#" class="thm-btn topbar__btn">Buy Tickets</a><!-- /.thm-btn -->
+                </div><!-- /.topbar-one__right -->
+            </div><!-- /.container -->
+        </div><!-- /.topbar-one -->
+
+        <nav class="main-nav-one stricky">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="logo-box">
+                    
+                        {# <a href="{{ path('app_login') }}">Sign in</a> #}
+                            <img src="assets/images/logo-1-1.png" alt="" width="143">
+                        </a>
+                        <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
+                    </div><!-- /.logo-box -->
+                    <div class="main-nav__main-navigation">
+
+                            <li class="thm-btn btn-style-one">
+                                    <a href="{{ path('app_login') }}">Sign in</a>
+                                    <a href="{{ path('app_front_visiteur') }}">about us</a>
+                                    <a href="{{ path('app_login') }}">Sign in</a>
+                                    <a href="{{ path('app_login') }}">Sign in</a>
+                                
+                            </li>
+                           
+                    </div><!-- /.main-nav__main-navigation -->
+                    <div class="main-nav__right">
+                        <a href="#" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
+                        <a class="sidemenu-icon side-content__toggler" href="#"><i class="muzex-icon-menu"></i></a>
+                    </div><!-- /.main-nav__right -->
+                </div><!-- /.inner-container -->
+            </div><!-- /.container -->
+        </nav><!-- /.main-nav-one -->
+
+
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel" data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": &quot;fadeOut&quot;, "animateIn": &quot;fadeIn&quot;, "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
+                <!-- Slide Item -->
+                <div class="slide-item">
+                    <div class="image-layer lazy-image" style="background-image: url('{{ asset('assets/images/main-slider/1.jpg') }}');"></div>
+
+                    <div class="container">
+                        <div class="content-box text-center">
+                            <h3>Opening On Sat. Oct 20, 2019</h3>
+                            <h2>One of the Finest Collections of <br> Muzex Art.</h2>
+                            <div class="btn-box"><a href="#" class="thm-btn btn-style-one">Learn
+                                    More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Item -->
+                <div class="slide-item">
+                    <div class="image-layer lazy-image" style="background-image: url('{{ asset('assets/images/main-slider/2.jpg') }}');"></div>
+
+                    <div class="container">
+                        <div class="content-box text-center">
+                            <h3>Opening On Sat. Oct 20, 2019</h3>
+                            <h2>Discover the Treasures of a Egypt <br> Historical Museum</h2>
+                            <div class="btn-box"><a href="#" class="thm-btn btn-style-one">Learn
+                                    More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Item -->
+                <div class="slide-item">
+                    <div class="image-layer lazy-image" style="background-image: url('{{ asset('assets/images/main-slider/3.jpg') }}');"></div>
+
+                    <div class="container">
+                        <div class="content-box text-center">
+                            <h3>Opening On Sat. Oct 20, 2019</h3>
+                            <h2>World’s Leading Museum of History <br> Over 2.3 k Collection</h2>
+                            <div class="btn-box"><a href="#" class="thm-btn btn-style-one">Learn
+                                    More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--End Banner Section -->
+
+        
+
+        
+
+        <section class="brand-one">
+            <div class="container">
+                <div class="brand-one__carousel thm__owl-carousel owl-carousel owl-theme" data-options='{
+            "items": 5, "margin": 150, "smartSpeed": 700, "loop": true, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": false, "nav": false, "dots": false, "responsive": {"0": { "margin": 20, "items": 2 }, "575": { "margin": 30, "items": 3 },"767": { "margin": 40, "items": 4 },   "991": { "margin": 70, "items": 4 }, "1199": { "margin": 150, "items": 5 } } }'>
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-1.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-2.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-3.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-4.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-5.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-1.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-2.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-3.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-4.png') }}" alt="">
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <img src="{{ asset('assets/images/brand/brand-1-5.png') }}" alt="">
+                    </div><!-- /.item -->
+                </div><!-- /.brand-one__carousel thm__owl-carousel owl-carousel owl-theme -->
+            </div><!-- /.container -->
+        </section><!-- /.brand-one -->
+
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+        {% block body %}{% endblock %}
+
+    <!-- Template JS -->
+
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.lettering.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.circleType.js') }}"></script>
+
+    <!-- Custom Scripts -->
+    <script src="{{ asset('assets/js/theme.js') }}"></script>
+
+{% block javascripts %}{% endblock %}
+</body>
+
+</html>

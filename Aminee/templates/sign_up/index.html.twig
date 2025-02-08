@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+<a href="{{ path('app_login') }}">Deconnection</a>
+<a href="{{ path('app_signup_editProfile', {id: user.id}) }}" class="btn btn-primary">Modifier mon compte</a>
+<a href="{{path('app_signup_remove',{id: user.id})}}">Delete your acc<a/>
+{% endblock %}

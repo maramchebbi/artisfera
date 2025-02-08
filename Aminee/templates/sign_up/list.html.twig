@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello signupController!{% endblock %}
+
+{% block body %}
+<h1>User List </h1>
+ <a href="{{path('app_signup_new')}}">Add user</a> 
+<div>
+{% if signups is defined and signups is not empty %}
+{% else %}
+<p>Tableau vide.</p>
+{% endif %}
+{% for signup in signups %}
+<p> <b> nom : </b> {{ signup.nom }} </p>
+<p> <b> prenom : </b> {{ signup.prenom }} </p>
+<p> <b> Date De Naissance : </b> {{ signup.DateDeNaissance | date('d-m-Y') }} </p>
+<p> <b> genre : </b> {{ signup.genre.g }} </p>
+<p> <b> je suis un  : </b> {{ signup.Type.T }} </p>
+<p> <b> e-mail : </b> {{ signup.email }} </p>
+<p> <b> mot de passe : </b> {{ signup.pwd }} </p>
+<a href="{{path('app_signup_edit',{id: signup.id})}}">Edit<a/>
+<a href="{{path('app_signup_remove_admine',{id: signup.id})}}">Delete<a/> 
+<hr>
+
+{% endfor %}
+ <a href="{{path('app_login')}}">Deconnection</a> 
+
+</div>
+{% endblock %}
